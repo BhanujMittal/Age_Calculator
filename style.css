@@ -1,0 +1,121 @@
+/* CSS resets */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body section */
+body {
+    font-family: cursive;
+    background: radial-gradient(blue, black, black) no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* primary heading */
+#h-primary {
+    position: absolute;
+    text-align: center;
+    top: 1rem;
+    font-weight: 900;
+    background: linear-gradient(to right, lightblue, lightgreen, lightcoral),no-repeat center center/cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    width: 80vw;
+}
+
+.container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(blue, red);
+    box-shadow: 3px 3px 8px 2px black;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.calculator {
+    display: flex;
+    gap: 1rem;
+}
+
+#date,
+#calculate,
+#reset {
+    padding: 0.2rem .5rem;
+    color: #30def4;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#reset {
+    display: none;
+}
+
+#reset.active {
+    display: flex;
+}
+
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.birthday, .birthdate, .date, .birth {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    background: linear-gradient(to right, lightblue, lightgreen, lightcoral),no-repeat center center/cover;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.date-container {
+    box-shadow: 5px 5px 8px 2px black;
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+#result {
+    margin-top: 1.5rem;
+}
+
+/* Media queries to make this page responsive */
+@media screen and (max-width: 800px) {
+    #h-primary {
+        font-size: 1.5rem;
+    }
+
+    .date-container {
+        padding: 1rem;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .calculator {
+        flex-direction: column;
+    }
+
+    .birthday, .birthdate, .date {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .birthday, .birthdate, .date {
+        font-size: .7rem;
+    }
+
+    .date-container {
+        padding: 0px;
+    }
+}
